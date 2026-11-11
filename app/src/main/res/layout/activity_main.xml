@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:background="#FAFCFF"
+    android:orientation="horizontal"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="16dp"
+        android:text="Nhắc việc &amp; Lịch học"
+        android:textColor="#17365D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/txtToday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:text="Hôm nay"
+        android:textColor="#737B88"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/txtTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDate"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="#E6F2FA"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="0"
+                android:tint="#235A90"
+                app:srcCompat="@drawable/baseline_event_available_24" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="1dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="0"
+                android:background="#B6C9D8" />
+
+            <TextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="0"
+                android:text="04/11/2026"
+                android:textColor="#17365D"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_weight="0"
+                android:tint="#235A90"
+                app:srcCompat="@drawable/ic_launcher_foreground" />
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:background="#E6F5F3"
+        android:tint="#36A3A5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_event_available_24" />
+
+    <LinearLayout
+        android:id="@+id/layoutGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDate">
+
+        <TextView
+            android:id="@+id/txtGroup"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_weight="0"
+            android:text="Nhóm việc:"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <Button
+            android:id="@+id/btnStudy"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#36A3A5"
+            android:text="Học tập"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+        <Button
+            android:id="@+id/btnPersonal"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#EAF3F5"
+            android:text="Cá nhân"
+            android:textAllCaps="false"
+            android:textColor="#17365D"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+        <Button
+            android:id="@+id/btnWork"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:backgroundTint="#EAF3F5"
+            android:text="Công việc"
+            android:textAllCaps="false"
+            android:textColor="#17365D"
+            android:textSize="11sp"
+            android:maxLines="1"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollTasks"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutGroup">
+
+        <LinearLayout
+            android:id="@+id/layoutTaskList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="90dp"
+            tools:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTask1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="88dp"
+                    android:orientation="horizontal"
+                    android:padding="12dp">
+
+                    <CheckBox
+                        android:id="@+id/chkDone1"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0"
+                        android:buttonTint="#36A3A5"
+                        android:checked="false" />
+
+                    <LinearLayout
+                        android:id="@+id/layoutTaskInfo1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtTask1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="0dp"
+                            android:layout_weight="0"
+                            android:text="Làm bài tập Java"
+                            android:textColor="#17365D"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/layoutTags1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_weight="0"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:id="@+id/txtTaskGroup1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="0dp"
+                                android:layout_weight="0"
+                                android:background="#E6F2FA"
+                                android:padding="4dp"
+                                android:text="Nhóm: Học tập"
+                                android:textColor="#17365D"
+                                android:textSize="10sp" />
+
+                            <TextView
+                                android:id="@+id/txtPriority1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="4dp"
+                                android:layout_weight="0"
+                                android:background="#FCE6E6"
+                                android:padding="4dp"
+                                android:text="Ưu tiên: Cao"
+                                android:textColor="#B63131"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
